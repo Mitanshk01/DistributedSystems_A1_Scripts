@@ -1,0 +1,7 @@
+upload a.txt /Users/mitanshk/a.txt
+list file a.txt
+failover 1
+list file a.txt
+recover 1
+list file a.txt
+

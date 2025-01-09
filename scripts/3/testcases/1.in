@@ -1,0 +1,7 @@
+upload a.txt /Users/mitanshk/a.txt
+list file a.txt
+failover 1
+failover 2
+download a.txt
+search a.txt abcd
+
