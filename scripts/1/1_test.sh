@@ -5,8 +5,11 @@ if ls ../../1/*.py &>/dev/null; then
 elif ls ../../1/*.cpp &>/dev/null; then
     mpic++ -o 1 ../../1/*.cpp
     executable="./1"
+elif ls ../../1/*.c &>/dev/null; then
+    mpicc -o 1 ../../1/*.c
+    executable="./1"
 else
-    echo "No Python or C++ file found in ../1/"
+    echo "No Python, C, or C++ file found in ../../1/"
     exit 1
 fi
 
