@@ -30,12 +30,10 @@ for i in $(seq 1 $num_test_cases); do
     all_passed=true
 
     for np in {1..12}; do
-        if [[ -n "$executable" && -f "$executable" ]]; then
-            if [[ "$executable" == python* ]]; then
-                mpiexec -np $np --use-hwthread-cpus --oversubscribe $executable < $test_file > results/1_${np}_${i}.txt
-            else
-                mpiexec -np $np --use-hwthread-cpus --oversubscribe $executable < $test_file > results/1_${np}_${i}.txt
-            fi
+        if [[ "$executable" == python* ]]; then
+            mpiexec -np $np --use-hwthread-cpus --oversubscribe $executable < $test_file > results/1_${np}_${i}.txt
+        else
+            mpiexec -np $np --use-hwthread-cpus --oversubscribe $executable < $test_file > results/1_${np}_${i}.txt
         fi
 
         normalize_spaces results/1_${np}_${i}.txt results/1_${np}_${i}_normalized.txt
