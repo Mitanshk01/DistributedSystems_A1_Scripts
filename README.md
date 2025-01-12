@@ -44,7 +44,8 @@ scripts/
 
   Each line represents the test case number and the corresponding marks.
 
-- **`Note`**: For Problem 3.3, the script has not been added yet. You can test Problems 3.1 and 3.2 for now.
+- For Problem 3.3, the script has not been added yet. You can test Problems 3.1 and 3.2 for now.
+- **`Note`**: Currently, support for C/C++/Python exists in the test script.
 
 ## Running Instructions
 
