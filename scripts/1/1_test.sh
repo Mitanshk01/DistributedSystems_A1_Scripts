@@ -1,6 +1,14 @@
 #!/bin/bash
 
-mpic++ -o 1 ../../1/1.cpp
+if ls ../../1/*.py &>/dev/null; then
+    executable="python3 ../../1/*.py"
+elif ls ../../1/*.cpp &>/dev/null; then
+    mpic++ -o 1 ../../1/*.cpp
+    executable="./1"
+else
+    echo "No Python or C++ file found in ../1/"
+    exit 1
+fi
 
 normalize_spaces() {
     sed -e 's/[[:space:]]\+/ /g' -e 's/[[:space:]]*$//' -e '/^$/d' "$1" > "$2"
@@ -19,7 +27,14 @@ for i in $(seq 1 $num_test_cases); do
     all_passed=true
 
     for np in {1..12}; do
-        mpiexec -np $np --use-hwthread-cpus --oversubscribe ./1 < $test_file > results/1_${np}_${i}.txt
+        if [[ -n "$executable" && -f "$executable" ]]; then
+            if [[ "$executable" == python* ]]; then
+                mpiexec -np $np --use-hwthread-cpus --oversubscribe $executable < $test_file > results/1_${np}_${i}.txt
+            else
+                mpiexec -np $np --use-hwthread-cpus --oversubscribe $executable < $test_file > results/1_${np}_${i}.txt
+            fi
+        fi
+
         normalize_spaces results/1_${np}_${i}.txt results/1_${np}_${i}_normalized.txt
         normalize_spaces $expected_output results/expected_${i}_normalized.txt
 
