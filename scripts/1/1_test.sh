@@ -3,7 +3,7 @@
 if ls ../../1/*.py &>/dev/null; then
     executable="python3 ../../1/*.py"
 elif ls ../../1/*.cpp &>/dev/null; then
-    mpic++ -o 1 ../../1/*.cpp
+    mpic++ -std=c++20 -o 1 ../../1/*.cpp
     executable="./1"
 elif ls ../../1/*.c &>/dev/null; then
     mpicc -o 1 ../../1/*.c
