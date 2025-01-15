@@ -44,7 +44,6 @@ scripts/
 
   Each line represents the test case number and the corresponding marks.
 
-- For Problem 3.3, the script has not been added yet. You can test Problems 3.1 and 3.2 for now.
 - **`Note`**: Currently, support for C/C++/Python exists in the test script.
 
 ## Running Instructions
@@ -93,6 +92,7 @@ scripts/
 
 ## Notes
 
+- For problem 3.3, 2 executables have been provided called `lb_interactive_tester` and `interactive_tester`. If you are not doing load_balancing in the assignment, then you can test by replacing `lb_interactive_tester` with the executable `interactive_tester`.
 - Ensure that `mpic++` and `mpiexec` are installed and available in your environment.
 - The scripts assume that the code to be tested is located in a specific directory relative to the `*_test.sh` script. Make sure to adjust the paths accordingly if the structure changes.
 - The test scripts handle whitespace normalization and newline removals to ensure consistent comparison of outputs.
