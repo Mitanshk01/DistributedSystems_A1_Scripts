@@ -1,7 +1,6 @@
-upload a.txt /Users/mitanshk/a.txt
-list file a.txt
+upload a.txt ../scripts/3/testcases/a.txt
 failover 1
-list file a.txt
+list_file a.txt
 recover 1
-list file a.txt
-
+list_file a.txt
+exit

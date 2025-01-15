@@ -1,7 +1,7 @@
-upload a.txt /Users/mitanshk/a.txt
-list file a.txt
+upload a.txt ../scripts/3/testcases/a.txt
+list_file a.txt
 failover 1
 failover 2
-download a.txt
+retrieve a.txt
 search a.txt abcd
-
+exit
