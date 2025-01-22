@@ -1,4 +1,4 @@
-upload a.txt ../scripts/3/testcases/a.txt
+upload a.txt testcases/a.txt
 failover 1
 list_file a.txt
 recover 1
