@@ -30,7 +30,7 @@ for i in $(seq 1 $num_test_cases); do
     all_passed=true
 
     for np in {1..12}; do
-        mpiexec -np $np --use-hwthread-cpus --oversubscribe $executable < $test_file > results/2_${np}_${i}.txt
+        mpiexec -np $np --use-hwthread-cpus --oversubscribe $executable $test_file results/2_${np}_${i}.txt
 
         normalize_spaces results/2_${np}_${i}.txt results/2_${np}_${i}_normalized.txt
         normalize_spaces $expected_output results/expected_${i}_normalized.txt
