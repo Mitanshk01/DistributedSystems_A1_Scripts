@@ -52,6 +52,6 @@ for i in $(seq 1 $num_test_cases); do
     fi
 done
 
-echo -e "Final Score: $total_marks/100"
+echo -e "Final Score: $total_marks/15"
 
 rm -rf 1 results/
