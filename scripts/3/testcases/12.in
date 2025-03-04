@@ -1,0 +1,8 @@
+upload large_test.txt testcases/large_test.txt
+failover 1
+failover 2
+failover 3
+retrieve large_test.txt
+recover 1
+retrieve large_test.txt
+exit

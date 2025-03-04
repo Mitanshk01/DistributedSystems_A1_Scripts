@@ -1,0 +1,5 @@
+upload large_lb_test1.txt testcases/large_lb_test1.txt
+upload large_lb_test2.txt testcases/large_lb_test2.txt
+upload small_lb_test.txt testcases/small_lb_test.txt
+upload a.txt testcases/a.txt
+exit

@@ -1,0 +1,3 @@
+upload search_test2.txt testcases/search_test2.txt
+search search_test1.txt abcd
+exit

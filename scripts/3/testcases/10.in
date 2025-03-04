@@ -1,0 +1,10 @@
+upload a.txt testcases/a.txt
+failover 1
+failover 2
+failover 3
+failover 4
+failover 5
+failover 6
+failover 7
+search a.txt abcd
+exit
