@@ -1,0 +1,16 @@
+upload a.txt testcases/a.txt
+failover 1
+failover 2
+failover 3
+failover 4
+failover 5
+failover 6
+failover 7
+retrieve a.txt
+recover 1
+recover 2
+recover 5
+retrieve a.txt
+failover 1
+retrieve a.txt
+exit

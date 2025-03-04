@@ -45,13 +45,12 @@ for i in $(seq 1 $num_test_cases); do
     if [ "$all_passed" = true ]; then
         printf "Test case $i: \e[32mPASSED\e[0m\n"
         marks=$(grep "^${i} " marks.txt | cut -d ' ' -f 2)
-        total_marks=$((total_marks + marks))
-
+        total_marks=$(echo "$total_marks + $marks" | bc)
     else
         printf "Test case $i: \e[31mFAILED\e[0m\n"
     fi
 done
 
-echo -e "Final Score: $total_marks/100"
+echo -e "Final Score: $total_marks/30"
 
 rm -rf 2 results/

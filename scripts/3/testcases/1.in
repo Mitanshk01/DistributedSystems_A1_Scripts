@@ -1,7 +1,3 @@
 upload a.txt testcases/a.txt
 list_file a.txt
-failover 1
-failover 2
-retrieve a.txt
-search a.txt abcd
 exit

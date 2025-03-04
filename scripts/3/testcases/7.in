@@ -1,0 +1,4 @@
+upload search_test1.txt testcases/search_test1.txt
+search search_test1.txt dcjdc
+search search_test1.txt abcd
+exit
